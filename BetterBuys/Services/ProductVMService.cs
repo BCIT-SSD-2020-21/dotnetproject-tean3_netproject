@@ -78,6 +78,7 @@ namespace BetterBuys.Services
             ProductVM productVM = new ProductVM();
             productVM.Id = product.Id;
             productVM.Name = product.Name;
+            productVM.Description = product.Description;
             productVM.Price = product.Price;
             productVM.ImageUri = product.ImageUri;
 
