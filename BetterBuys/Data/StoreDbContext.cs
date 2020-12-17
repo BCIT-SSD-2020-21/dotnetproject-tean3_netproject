@@ -47,12 +47,16 @@ namespace BetterBuys.Data
             modelBuilder.Entity<CartProduct>()
                 .HasOne(cp => cp.Product)
                 .WithMany(p => p.CartProducts)
-                .HasForeignKey(fk => new { fk.ProductId }); 
+                .HasForeignKey(fk => new { fk.ProductId });
 
             modelBuilder.Entity<CheckoutInfo>()
                 .HasOne(ci => ci.Cart)
                 .WithOne(sc => sc.CheckoutInfo)
                 .HasForeignKey<CheckoutInfo>(fk => new { fk.CartId });
+                       
         }
+
+
     }
 }
+
